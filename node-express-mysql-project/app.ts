@@ -1,7 +1,5 @@
 import express from "express";
-import { router as user} from "./api/user";
-import { router as vote } from "./api/vote";
-import { router as upload } from "./api/uploads";
+
 import { router as customer } from "./api/customer";
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -25,18 +23,6 @@ app.use(bodyParser.text());
 app.use(bodyParser.json()); 
 
 
-
-app.use("/", user);
-app.use("/login", user);
-app.use("/insert", user);
-app.use("/update", user);
-
-
-app.use("/vote", vote); 
-app.use("/get", vote); 
-
-
-app.use("/upload", upload); 
 // app.use("/uploads", express.static("uploads"));
 
 // app.use('/upload', express.static(path.join(__dirname, 'uploads')));
